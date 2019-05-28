@@ -1,25 +1,44 @@
 <template>
-  <div :style="cardStyle" class="card-container">
+  <div :style="cardStyle"
+       class="card
+              w-auto max-w-sm
+              flex flex-col justify-between
+              px-8 py-4 border border-gray-500 rounded-lg">
+
     <div class="header">
-      <p>{{bankName}}</p>
+      <p class="header-text
+                pb-3 pr-2
+                font-bold tracking-wider text-right text-4xl text-blue-200">
+        {{bankName}}</p>
     </div>
 
-    <div class="chip-container">
-      <img src="../../assets/images/icons/credit-card-chip.icon.png" class="chip-image" alt="chip">
+    <div class="chip-image-container
+                relative h-12">
+      <img src="../../assets/images/icons/credit-card-chip.icon.png"
+           class="chip-image
+                  h-20 w-20"
+           alt="chip">
     </div>
 
-    <div class="card-number-container">
-      <div class="card-number">
-        <p v-for="number in cardNumberArray">{{ number }}</p>
-      </div>
+    <div class="card-number-container
+                  flex justify-between align-center px-2 pt-5 pb-8">
+
+      <!--v-for for 4 group of card number-->
+      <p v-for="number in cardNumberArray"
+         class="card-number text-outside-shadow text-2xl tracking-widest">
+        {{ number }}</p>
     </div>
 
-    <div class="footer">
+    <div class="footer
+                flex justify-between align-center">
       <div class="user-name">
-        <p>{{userName}}</p>
+        <p class="text-xl text-white text-outside-shadow">
+          {{userName}}</p>
       </div>
+
       <div class="deadline">
-        <p>{{deadline}}</p>
+        <p class="text-lg text-white text-outside-shadow">
+          {{deadline}}</p>
       </div>
     </div>
   </div>
@@ -68,88 +87,16 @@
 </script>
 
 <style lang="scss" scoped>
-  .card-container {
-    width: 100%;
-    height: 100%;
-    max-width: 350px;
-    max-height: 200px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    border-radius: 10px;
-    border: 1px solid #cccccc;
-
-    padding: 20px 25px;
+  .chip-image-container {
+    .chip-image {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+    }
   }
 
-  .header {
-    height: 40px;
-    margin: 0 0 15px;
-  }
-
-  .header p {
-    font-size: 32px;
-    font-weight: bold;
-    color: #9dc6d9;
-
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .chip-container {
-    position: relative;
-    height: 30px;
-  }
-
-  .chip-container .chip-image {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-
-    height: 70PX;
-    width: 70px;
-  }
-
-  .card-number-container {
-    height: 40px;
-    margin: 10px 0 15px;
-  }
-
-  .card-number-container .card-number {
-    height: 40px;
-
-    font-size: 24px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .card-number-container .card-number p {
-    letter-spacing: 4px;
-    text-shadow: 0 -1px 2px #000000;
-    color: #ffffff;
-  }
-
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer .user-name p {
-    font-size: 18px;
-
-    letter-spacing: 2px;
-    text-shadow: 0 -1px 2px #000000;
-    color: #ffffff;
-  }
-
-  .footer .deadline p {
-    letter-spacing: 4px;
+  .text-outside-shadow {
     text-shadow: 0 -1px 2px #000000;
     color: #ffffff;
   }

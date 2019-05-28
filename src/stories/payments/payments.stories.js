@@ -11,10 +11,10 @@ storiesOf('Payments', module)
     components: {BasicCreditCard},
     props: {
       bankName: {
-        default: text('bank name', 'Bank Name'),
+        default: text('bank name', 'VISA'),
       },
       cardNumber: {
-        default: text('card number', '0000000000000000'),
+        default: text('card number', '1233232194890398'),
       },
       userName: {
         default: text('user name', 'Engine Lin'),
