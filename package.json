@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "start-storybook",
-    "build": "build-storybook -c .storybook -o dist"
+    "build": "build-storybook -c .storybook -o docs"
   },
   "dependencies": {
     "@storybook/vue": "^5.0.11",
