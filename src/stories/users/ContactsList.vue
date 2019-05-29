@@ -25,7 +25,7 @@
                       w-10 h-8 ml-1 flex justify-center items-center">
             <div class="light-point
                         w-2 h-2 rounded-full"
-                 :class="takeLightPointClass(account.isOnline)"></div>
+                 :class="takeLightPointStyle(account.isOnline)"></div>
           </div>
 
           <p class="name w-auto flex-1">
@@ -106,17 +106,19 @@
         return this.accounts
       }
 
+
       return this.accounts.filter(account => {
 
         const search = this.searchValue.toLowerCase()
         const group = account.group.toLowerCase()
         const name = account.name.toLowerCase()
 
-        return group === search || name.indexOf(search) !== -1;
+        // 簡單的搜尋邏輯，完全符合 group 或者部分符合帳號的名字
+        return group === search || name.indexOf(search) !== -1
       })
     }
 
-    takeLightPointClass(isOnline) {
+    takeLightPointStyle(isOnline) {
       if (isOnline) {
         return 'bg-green-500'
       } else {
@@ -130,7 +132,3 @@
     }
   }
 </script>
-
-<style scoped>
-
-</style>
