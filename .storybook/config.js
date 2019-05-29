@@ -9,8 +9,6 @@ import 'tailwindcss/dist/components.min.css'
 import 'tailwindcss/dist/utilities.min.css'
 
 // import ionicons css to use icons
-// import 'ionicons/dist/ionicons'
-// import 'ionicons/dist/css/ionicons-core.min.css'
 import 'ionicons/dist/css/ionicons.min.css'
 
 // automatically import all files ending in *.stories.js

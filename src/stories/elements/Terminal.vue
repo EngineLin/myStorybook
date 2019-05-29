@@ -1,5 +1,5 @@
 <template>
-  <div class="terminal max-w-4xl rounded overflow-hidden">
+  <div class="terminal max-w-4xl rounded overflow-hidden relative">
 
     <div class="header
                 w-full h-6 px-1 bg-gray-900">
@@ -18,6 +18,10 @@
                 w-full bg-gray-700 opacity-50
                 px-2 py-4">
     </div>
+
+    <div class="body-display">
+      <h2 class="text-2xl text-white m-8">Hello, I'm Engine Lin</h2>
+    </div>
   </div>
 </template>
 
@@ -33,5 +37,13 @@
 <style scoped>
   .body {
     min-height: 30rem;
+  }
+
+  .body-display {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    top: 1.5rem;
+    left: 0;
   }
 </style>
