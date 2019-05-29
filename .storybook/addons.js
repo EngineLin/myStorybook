@@ -10,5 +10,8 @@ import '@storybook/addon-notes/register'
 // 可以觀察物件觸發的事件
 import '@storybook/addon-actions/register'
 
+// 可以切換背景樣式
+import '@storybook/addon-backgrounds/register'
+
 // 可以看到原始碼(位於 .stories 的)
 // import '@storybook/addon-storysource/register'
