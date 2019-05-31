@@ -48,7 +48,7 @@ storiesOf('Buttons', module)
       },
     },
     template: `
-      <div class="m-16">
+      <div class="m-24">
         <PersonaButton01 :title="title" :subtitle="subtitle"></PersonaButton01>
        </div>
       `,
@@ -67,10 +67,24 @@ storiesOf('Buttons', module)
       },
     },
     template: `
-      <div class="m-16">
+      <div class="m-24">
         <PersonaButton02 :title="title" :subtitle="subtitle"></PersonaButton02>
        </div>
       `,
   }), {
     notes: 'PS4 game: Persona5\'s battle UI: https://www.tumblr.com/search/persona%205%20battle%20ui',
   })
+
+  .add('persona5 buttons', () => ({
+    components: {PersonaButton01, PersonaButton02},
+    template: `
+      <div class="m-24">
+        <div class="mb-32">
+          <PersonaButton01 title="Play Video Game" subtitle="hard cord player!?"></PersonaButton01>
+        </div>
+        <div>
+          <PersonaButton02 title="Exercise" subtitle="move body!"></PersonaButton02>
+        </div>
+      </div>
+    `
+  }))

@@ -58,12 +58,12 @@
 
   .red-block {
     background: red;
-    width: 100%;
+    width: 130%;
     height: 4rem;
 
     position: absolute;
-    top: 30%;
-    left: -20%;
+    top: 45%;
+    left: -10%;
     transform: skewX(-25deg);
     z-index: -1;
   }
