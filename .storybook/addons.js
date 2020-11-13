@@ -14,4 +14,4 @@ import '@storybook/addon-actions/register'
 import '@storybook/addon-backgrounds/register'
 
 // 可以看到原始碼(位於 .stories 的)
-// import '@storybook/addon-storysource/register'
+import '@storybook/addon-storysource/register'
