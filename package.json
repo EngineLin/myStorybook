@@ -9,7 +9,8 @@
     "dayjs": "^1.8.14",
     "ramda": "^0.26.1",
     "tailwindcss": "^1.0.2",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-infinite-loading": "^2.4.5"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -29,9 +30,11 @@
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^2.1.1",
     "ionicons": "^4.5.8",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylus-loader": "^4.3.0",
+    "svg-sprite-loader": "^5.0.0",
     "vue-class-component": "^7.1.0",
     "vue-loader": "^15.7.0",
     "vue-property-decorator": "^8.1.1",
