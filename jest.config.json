@@ -1,0 +1,13 @@
+{
+  "moduleNameMapper": {
+    "@/(.*)$": "<rootDir>/src/$1"
+  },
+  "moduleFileExtensions": [
+    "js",
+    "vue"
+  ],
+  "transform": {
+    "\\.jsx?$": "babel-jest",
+    "\\.(vue)$": "jest-vue-preprocessor"
+  }
+}

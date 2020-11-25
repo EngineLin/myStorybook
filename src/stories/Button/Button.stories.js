@@ -1,31 +1,23 @@
-import {storiesOf} from '@storybook/vue'
-import {withKnobs, text} from '@storybook/addon-knobs'
+import MatthewWilliamsComponent from './MatthewWilliams'
 
-import MatthewWilliams from './MatthewWilliams'
+export default {
+    title: 'Button',
+    component: MatthewWilliamsComponent,
+    parameters: {
+        backgrounds: {
+            default: 'space',
+            values: [
+                {
+                    name: 'space',
+                    value: '#252934'
+                }
+            ]
+        },
+    },
+}
 
-/*
-storiesOf('Button', module)
-
-  .addDecorator(withKnobs)
-
-  .add('', () => ({
-    components: {MatthewWilliamsButton},
-    template: `
-      <div class="m-8">
-        <MatthewWilliamsButton></MatthewWilliamsButton>
-      </div>
-    `,
-  }), {
-    notes: 'learn from Matthew Williams\'s personal website: http://findmatthew.com/',
-    backgrounds: [{name: 'space', value: '#252934', default: true}],
-  })
-*/
-
+// learn from Matthew Williams's personal website: http://findmatthew.com/
 export const MatthewWilliamsButton = () => ({
-    components: {MatthewWilliams},
-    template: `
-      <div class="m-8">
-        <MatthewWilliams />
-      </div>  
-    `,
+    components: {MatthewWilliamsComponent},
+    template: `<MatthewWilliamsComponent />`
 })

@@ -1,33 +1,47 @@
-import {storiesOf} from '@storybook/vue'
-import {withKnobs, text} from '@storybook/addon-knobs'
+import CreditCardComponent from './CreditCard'
 
-import Default from './Default'
+export default {
+    title: 'Payment/CreditCard',
+    component: CreditCardComponent,
+    argTypes: {
+        bankName: {
+            control: {
+                type: 'text',
+            },
+        },
+        cardNumber: {
+            control: {
+                type: 'text',
+            },
+        },
+        userName: {
+            control: {
+                type: 'text',
+            },
+        },
+        deadline: {
+            control: {
+                type: 'text',
+            },
+        },
+    }
+}
 
-storiesOf('Payment/CreditCard', module)
-
-  .add('Default', () => ({
-    components: {Default},
-    props: {
-      bankName: {
-        default: text('bank name', 'VISA'),
-      },
-      cardNumber: {
-        default: text('card number', '1233232194890398'),
-      },
-      userName: {
-        default: text('user name', 'Engine Lin'),
-      },
-      deadline: {
-        default: text('deadline', '01/01'),
-      },
-    },
+export const Default = (args = {}) => ({
+    components: {CreditCardComponent},
+    props: Object.keys(args),
     template: `
-      <Default 
+      <CreditCardComponent 
           :bankName="bankName" 
           :cardNumber="cardNumber" 
           :userName="userName" 
           :deadline="deadline"
       />
     `,
-  }))
-
+})
+Default.args = {
+    bankName: 'VISA',
+    cardNumber: '1233232194890398',
+    userName: 'Engine Lin',
+    deadline: '01/01'
+}

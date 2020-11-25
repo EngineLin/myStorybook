@@ -1,3 +1,5 @@
+import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport';
+
 import 'css-reset-and-normalize/css/reset-and-normalize.min.css'
 
 // Import tailwindcss for atom style design
@@ -9,5 +11,9 @@ import 'tailwindcss/dist/utilities.min.css'
 import 'ionicons/dist/css/ionicons.min.css'
 
 export const parameters = {
-    actions: { argTypesRegex: '^on[A-Z].*' }
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: { expanded: true },
+    viewport: {
+        viewports: INITIAL_VIEWPORTS
+    }
 }

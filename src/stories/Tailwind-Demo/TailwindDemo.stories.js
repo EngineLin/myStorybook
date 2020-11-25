@@ -1,21 +1,24 @@
 import {storiesOf} from '@storybook/vue'
-import UserChatCardWithTailwind from './UserChatCardWithTailwind'
-import ContactsList from './ContactsList'
+import UserChatCardWithTailwindComponent from './UserChatCardWithTailwind'
+import ContactsListComponent from './ContactsList'
 
-storiesOf('Users', module)
+const PaddedLayout = () => `<div class="p-5"><story /></div>`
 
-.add('card with avatar', () => ({
-  components: {UserChatCardWithTailwind},
+export default {
+  title: 'Tailwind Demo',
+  decorators: [PaddedLayout]
+}
+
+export const CardWithAvatar = () => ({
+  components: {UserChatCardWithTailwindComponent},
   template: `
-    <UserChatCardWithTailwind></UserChatCardWithTailwind>
+    <UserChatCardWithTailwindComponent />
   `
-}))
+})
 
-.add('contacts list', () => ({
-  components: {ContactsList},
+export const ContactsList = () => ({
+  components: {ContactsListComponent},
   template: `
-    <div class="m-16">
-      <ContactsList></ContactsList>
-    </div>
+    <ContactsListComponent />
   `
-}))
+})

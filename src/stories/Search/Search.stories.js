@@ -1,16 +1,24 @@
-import {storiesOf} from '@storybook/vue'
 import {action} from '@storybook/addon-actions'
+import { createPaddedDecorator } from '../../utils/storyDecorators'
 
 import SearchWithMagnifierIcon from './SearchWithMagnifierIcon'
 
-storiesOf('Search', module)
+const paddedLayout = createPaddedDecorator('15px')
 
-  .add('with magnifier icon', () => ({
+const actions = {
+    onChange: action('Input Value Changed')
+}
+
+export default {
+    title: 'Search',
+    decorators: [paddedLayout]
+}
+
+export const WithMagnifierIcon = () => ({
     components: {SearchWithMagnifierIcon},
-    methods: {action() {return action}},
     template: `
-     <div class="m-8">
-       <SearchWithMagnifierIcon @submit="action('input submit')"></SearchWithMagnifierIcon>
-     </div> 
-  `,
-  }))
+      <SearchWithMagnifierIcon @change="onChange" />
+    `,
+    methods: actions
+})
+
