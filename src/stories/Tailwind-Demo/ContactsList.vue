@@ -62,7 +62,7 @@
 
 <script>
   import {Component, Vue, Emit} from 'vue-property-decorator'
-  import SearchWithMagnifierIcon from '../search/SearchWithMagnifierIcon'
+  import SearchWithMagnifierIcon from '../Search/SearchWithMagnifierIcon'
 
   @Component({components: {SearchWithMagnifierIcon}})
   export default class ContactsList extends Vue {
@@ -127,7 +127,6 @@
     }
 
     handleSearchInputSubmit(searchValue) {
-      console.log('searchValue', searchValue)
       this.searchValue = searchValue
     }
   }

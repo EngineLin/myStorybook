@@ -14,7 +14,7 @@
 
     <div class="chip-image-container
                 relative h-12">
-      <img src="../../assets/images/icons/credit-card-chip.icon.png"
+      <img src="../../../assets/images/icons/credit-card-chip.icon.png"
            class="chip-image
                   h-20 w-20"
            alt="chip">

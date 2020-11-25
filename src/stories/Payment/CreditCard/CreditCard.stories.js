@@ -1,14 +1,12 @@
 import {storiesOf} from '@storybook/vue'
 import {withKnobs, text} from '@storybook/addon-knobs'
 
-import BasicCreditCard from './BasicCreditCard'
+import Default from './Default'
 
-storiesOf('Payments', module)
+storiesOf('Payment/CreditCard', module)
 
-  .addDecorator(withKnobs)
-
-  .add('basic credit card', () => ({
-    components: {BasicCreditCard},
+  .add('Default', () => ({
+    components: {Default},
     props: {
       bankName: {
         default: text('bank name', 'VISA'),
@@ -24,11 +22,12 @@ storiesOf('Payments', module)
       },
     },
     template: `
-      <BasicCreditCard :bankName="bankName"
-                       :cardNumber="cardNumber"
-                       :userName="userName"
-                       :deadline="deadline"
-      ></BasicCreditCard>
+      <Default 
+          :bankName="bankName" 
+          :cardNumber="cardNumber" 
+          :userName="userName" 
+          :deadline="deadline"
+      />
     `,
   }))
 

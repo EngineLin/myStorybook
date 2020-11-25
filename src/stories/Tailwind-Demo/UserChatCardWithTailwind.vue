@@ -17,7 +17,7 @@
 
         <p class="user-job-title
                   text-sm leading-tight text-gray-600">
-          Customer Support Specialst
+          Customer Support Specialist
         </p>
 
         <div class="contact-button-container
