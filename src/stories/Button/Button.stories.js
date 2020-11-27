@@ -1,3 +1,4 @@
+import {action} from '@storybook/addon-actions';
 import MatthewWilliamsComponent from './MatthewWilliams'
 
 export default {
@@ -16,8 +17,32 @@ export default {
     },
 }
 
-// learn from Matthew Williams's personal website: http://findmatthew.com/
-export const MatthewWilliamsButton = () => ({
+/**
+ * learn from Matthew Williams's personal website: http://findmatthew.com/
+ */
+export const MatthewWilliamsButton = (args = {}) => ({
     components: {MatthewWilliamsComponent},
-    template: `<MatthewWilliamsComponent />`
+    argTypes: {
+      label: {
+        control: {
+          type: 'text'
+        }
+      }
+    },
+    props: Object.keys(args),
+    template: `
+      <MatthewWilliamsComponent 
+        :data="{ label, value: true }"
+        @click="onClick"
+      />
+    `,
+    methods: {
+        onClick(value) {
+            action('Button Clicked')(value)
+        }
+    }
 })
+
+MatthewWilliamsButton.args = {
+    label: 'Matthew Williams\'s Button'
+}

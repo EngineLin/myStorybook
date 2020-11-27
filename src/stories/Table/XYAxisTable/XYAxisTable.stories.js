@@ -1,11 +1,14 @@
 import { action } from '@storybook/addon-actions'
+
 import XYAxisTableComponent from './XYAxisTable'
 
 export default {
     title: 'Table/Mobile XYAxis Table',
     component: XYAxisTableComponent,
     parameters: {
-        controls: { expanded: true },
+        controls: {
+            expanded: true
+        },
         layout: 'fullscreen',
         viewport: {
             defaultViewport: 'iphonex',

@@ -1,17 +1,13 @@
 import {action} from '@storybook/addon-actions'
-import { createPaddedDecorator } from '../../utils/storyDecorators'
 
 import SearchWithMagnifierIcon from './SearchWithMagnifierIcon'
 
-const paddedLayout = createPaddedDecorator('15px')
+export default {
+    title: 'Search',
+}
 
 const actions = {
     onChange: action('Input Value Changed')
-}
-
-export default {
-    title: 'Search',
-    decorators: [paddedLayout]
 }
 
 export const WithMagnifierIcon = () => ({

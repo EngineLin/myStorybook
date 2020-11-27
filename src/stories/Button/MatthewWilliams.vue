@@ -2,10 +2,12 @@
   <button class="button px-5 py-3
                  flex items-center
                  border-2 border-white
-                 hover:bg-teal-400 hover:border-teal-400 focus:outline-none">
+                 hover:bg-teal-400 hover:border-teal-400 focus:outline-none"
+          @click="handleClick"
+  >
 
     <p class="text-xl text-white tracking-wide">
-      {{datum.label}}</p>
+      {{data.label}}</p>
 
     <span class="icon-container
                  h-full ml-4 mr-2
@@ -26,16 +28,16 @@
       return value
     }
 
-    // @Prop({default: {label: 'View my work', value: true}})
-    datum = {label: 'View my work', value: true}
-
-    @Watch('data')
-    watchData(value) {
-      console.log(value)
-    }
+    @Prop({
+        default: {
+            label: 'View my work',
+            value: true
+        }
+    })
+    data
 
     handleClick() {
-      this.submit(this.datum.value)
+      this.submit(this.data.value)
     }
   }
 </script>
