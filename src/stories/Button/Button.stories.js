@@ -24,9 +24,6 @@ export default {
 export const MatthewWilliamsButton = (args = {}) => ({
     components: {MatthewWilliamsComponent},
     props: Object.keys(args),
-    parameters: {
-        jest: ['MatthewWilliams.spec.js']
-    },
     argTypes: {
       label: {
         control: {
@@ -49,4 +46,7 @@ export const MatthewWilliamsButton = (args = {}) => ({
 
 MatthewWilliamsButton.args = {
     label: 'Matthew Williams\'s Button'
+}
+MatthewWilliamsButton.parameters = {
+    jest: ['MatthewWilliams.spec.js']
 }

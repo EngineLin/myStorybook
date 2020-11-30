@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import {Component, Vue, Prop, Emit, Watch} from 'vue-property-decorator'
+  import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
 
   @Component
   export default class MatthewWilliamsButton extends Vue {
@@ -29,10 +29,10 @@
     }
 
     @Prop({
-        default: {
+        default: () => ({
             label: 'View my work',
             value: true
-        }
+        })
     })
     data
 

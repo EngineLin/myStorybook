@@ -1,10 +1,9 @@
 <template>
-  <div :style="cardStyle"
-       class="card
+  <div class="card
               w-auto max-w-sm
               flex flex-col justify-between
-              px-8 py-4 border border-gray-500 rounded-lg">
-
+              px-8 py-4 border border-gray-500 rounded-lg"
+  >
     <div class="header">
       <p class="header-text
                 pb-3 pr-2
@@ -45,7 +44,7 @@
 </template>
 
 <script>
-  import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
+  import {Component, Vue, Prop} from 'vue-property-decorator'
 
   @Component({props: ['bankName', 'cardNumber', 'userName', 'deadline']})
   export default class BasicCreditCard extends Vue {
@@ -61,24 +60,17 @@
     @Prop()
     deadline
 
-    get cardStyle() {
-      return {background: `linear-gradient(to right, #68a8ba, #347faa)`}
-    }
-
     get cardNumberArray() {
       const array = this.cardNumber.split('')
 
       return array
         .reduce((prov, curr, index) => {
-
           const order = Math.floor(index / 4)
-
           if (prov[order]) {
             prov[order].push(curr)
           } else {
             prov[order] = [curr]
           }
-
           return prov
         }, [])
         .map(array => array.join(''))
@@ -87,6 +79,10 @@
 </script>
 
 <style lang="scss" scoped>
+  .card {
+    background: linear-gradient(to right, #68a8ba, #347faa);
+  }
+
   .chip-image-container {
     .chip-image {
       position: absolute;

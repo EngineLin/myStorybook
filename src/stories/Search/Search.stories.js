@@ -17,4 +17,7 @@ export const WithMagnifierIcon = () => ({
     `,
     methods: actions
 })
+WithMagnifierIcon.parameters = {
+    jest: ['SearchWithMagnifierIcon.spec.js']
+}
 

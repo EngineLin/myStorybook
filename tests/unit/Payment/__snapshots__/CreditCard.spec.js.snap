@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshot 1`] = `
+"<div class=\\"card
+            w-auto max-w-sm
+            flex flex-col justify-between
+            px-8 py-4 border border-gray-500 rounded-lg\\">
+  <div class=\\"header\\">
+    <p class=\\"header-text
+              pb-3 pr-2
+              font-bold tracking-wider text-right text-4xl text-blue-200\\">
+      VISA</p>
+  </div>
+  <div class=\\"chip-image-container
+              relative h-12\\"><img src=\\"../../../assets/images/icons/credit-card-chip.icon.png\\" alt=\\"chip\\" class=\\"chip-image
+                h-20 w-20\\"></div>
+  <div class=\\"card-number-container
+                flex justify-between align-center px-2 pt-5 pb-8\\">
+    <p class=\\"card-number text-outside-shadow text-2xl tracking-widest\\">
+      1233</p>
+    <p class=\\"card-number text-outside-shadow text-2xl tracking-widest\\">
+      2321</p>
+    <p class=\\"card-number text-outside-shadow text-2xl tracking-widest\\">
+      9489</p>
+    <p class=\\"card-number text-outside-shadow text-2xl tracking-widest\\">
+      0398</p>
+  </div>
+  <div class=\\"footer
+              flex justify-between align-center\\">
+    <div class=\\"user-name\\">
+      <p class=\\"text-xl text-white text-outside-shadow\\">
+        Engine Lin</p>
+    </div>
+    <div class=\\"deadline\\">
+      <p class=\\"text-lg text-white text-outside-shadow\\">
+        01/01</p>
+    </div>
+  </div>
+</div>"
+`;

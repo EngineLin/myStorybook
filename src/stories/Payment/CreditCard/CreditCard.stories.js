@@ -45,3 +45,6 @@ Default.args = {
     userName: 'Engine Lin',
     deadline: '01/01'
 }
+Default.parameters = {
+    jest: ['CreditCard.spec.js']
+}

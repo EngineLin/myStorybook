@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshot 1`] = `
+"<button class=\\"button px-5 py-3
+               flex items-center
+               border-2 border-white
+               hover:bg-teal-400 hover:border-teal-400 focus:outline-none\\">
+  <p class=\\"text-xl text-white tracking-wide\\">
+    new message</p> <span class=\\"icon-container
+               h-full ml-4 mr-2
+               flex justify-center items-center\\"><i class=\\"icon ion-md-arrow-round-forward
+              text-white text-lg\\"></i></span>
+</button>"
+`;

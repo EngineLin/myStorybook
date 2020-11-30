@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match snapshot 1`] = `
+"<div class=\\"search
+            flex items-center w-auto bg-gray-200 rounded py-2\\">
+  <div class=\\"search-icon-container
+              px-2 flex justify-center items-center\\"><img src=\\"../../assets/images/icons/heroicons/icon-search.svg\\" alt=\\"search icon\\" class=\\"search-icon
+                w-6 h-6 text-gray-200\\"></div> <input type=\\"text\\" placeholder=\\"Search teams or members\\" class=\\"search-input
+                w-full h-full bg-transparent
+                focus:outline-none\\">
+</div>"
+`;

@@ -1,9 +1,11 @@
 {
   "scripts": {
-    "build": "build-storybook -c .storybook -o docs",
-    "dev": "start-storybook",
-    "test:unit": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit",
     "test:generate-output": "vue-cli-service test:unit --json --outputFile=.jest-test-results.json",
+    "test:watch": "yarn prebuild -- --watch",
+    "dev": "start-storybook",
+    "prebuild": "yarn test:generate-output",
+    "build": "build-storybook -c .storybook -o docs",
     "deploy": "gh-pages -d docs/"
   },
   "dependencies": {

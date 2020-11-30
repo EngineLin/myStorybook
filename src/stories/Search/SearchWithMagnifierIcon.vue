@@ -11,7 +11,8 @@
     </div>
 
     <input type="text"
-           v-model="inputValue"
+           :value="value"
+           @input="onInput"
            placeholder="Search teams or members"
            class="search-input
                   w-full h-full bg-transparent
@@ -20,24 +21,24 @@
 </template>
 
 <script>
-  import {Component, Vue, Emit, Watch} from 'vue-property-decorator'
+  import {Component, Vue, Prop, Emit} from 'vue-property-decorator'
 
   @Component
   export default class SearchWithMagnifierIcon extends Vue {
+    @Prop({
+      type: String,
+      default: ''
+    })
+    value
+
     @Emit('change')
     change(value) {
       return value
     }
 
-    @Watch('inputValue')
-    watchInputValue(value) {
+    onInput(e) {
+      const {value} = e.target
       this.change(value)
     }
-
-    inputValue = ''
   }
 </script>
-
-<style scoped>
-
-</style>
