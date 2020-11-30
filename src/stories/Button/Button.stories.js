@@ -1,4 +1,5 @@
 import {action} from '@storybook/addon-actions';
+
 import MatthewWilliamsComponent from './MatthewWilliams'
 
 export default {
@@ -22,6 +23,10 @@ export default {
  */
 export const MatthewWilliamsButton = (args = {}) => ({
     components: {MatthewWilliamsComponent},
+    props: Object.keys(args),
+    parameters: {
+        jest: ['MatthewWilliams.spec.js']
+    },
     argTypes: {
       label: {
         control: {
@@ -29,7 +34,6 @@ export const MatthewWilliamsButton = (args = {}) => ({
         }
       }
     },
-    props: Object.keys(args),
     template: `
       <MatthewWilliamsComponent 
         :data="{ label, value: true }"
